@@ -36,6 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\SaveLoadSystem\Scripts\GameEvents.cs" />
      <Compile Include="Assets\SaveLoadSystem\Scripts\Gameplay\Dot.cs" />
      <Compile Include="Assets\SaveLoadSystem\Scripts\Gameplay\DotSpawner.cs" />
      <Compile Include="Assets\SaveLoadSystem\Scripts\Gameplay\PlayerMovement.cs" />
@@ -43,6 +44,7 @@
      <Compile Include="Assets\SaveLoadSystem\Scripts\SaveLoad\SaveData\DotData.cs" />
      <Compile Include="Assets\SaveLoadSystem\Scripts\SaveLoad\SaveData\PlayerData.cs" />
      <Compile Include="Assets\SaveLoadSystem\Scripts\SaveLoad\SaveData\SaveData.cs" />
+     <Compile Include="Assets\SaveLoadSystem\Scripts\SaveLoad\SaveLoadManager.cs" />
      <Compile Include="Assets\SaveLoadSystem\Scripts\SaveLoad\Serialization\SerializationManager.cs" />
      <Compile Include="Assets\SaveLoadSystem\Scripts\SaveLoad\Serialization\Vector2Surrogate.cs" />
      <Compile Include="Assets\SaveLoadSystem\Scripts\UI\MenuButton.cs" />

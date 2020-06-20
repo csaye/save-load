@@ -60,6 +60,15 @@ namespace SaveLoadSystem.SaveLoad
         private static BinaryFormatter GetBinaryFormatter()
         {
             BinaryFormatter formatter = new BinaryFormatter();
+
+            SurrogateSelector selector = new SurrogateSelector();
+
+            Vector2Surrogate vector2Surrogate = new Vector2Surrogate();
+
+            selector.AddSurrogate(typeof(Vector2), new StreamingContext(StreamingContextStates.All), vector2Surrogate);
+
+            formatter.SurrogateSelector = selector;
+
             return formatter;
         }
     }

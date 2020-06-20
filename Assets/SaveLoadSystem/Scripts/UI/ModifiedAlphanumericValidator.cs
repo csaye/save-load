@@ -23,11 +23,25 @@ namespace TMPro
         // Returns whether character and position meet specifications
         private bool isValid(char ch, int pos)
         {
-            if (ch >= 'A' && ch <= 'Z') return true;
-            if (ch >= 'a' && ch <= 'z') return true;
-            if (ch >= '0' && ch <= '9') return true;
-            if (ch == '_') return true;
-            if (ch == ' ' && pos != 0) return true;
+            if (ch >= 'A' && ch <= 'Z')
+            {
+                return true;
+            }
+            if (ch >= 'a' && ch <= 'z')
+            {
+                return true;
+            }
+            if (ch >= '0' && ch <= '9'){
+                return true;
+            }
+            if (ch == '_')
+            {
+                return true;
+            }
+            if (ch == ' ' && pos != 0)
+            {
+                return true;
+            }
             return false;
         }
     }
