@@ -652,17 +652,17 @@ MonoBehaviour:
   m_VerticalScrollbar: {fileID: 0}
   m_VerticalScrollbarEventHandler: {fileID: 0}
   m_ScrollSensitivity: 1
-  m_ContentType: 0
+  m_ContentType: 9
   m_InputType: 0
   m_AsteriskChar: 42
   m_KeyboardType: 0
   m_LineType: 0
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 8
   m_RegexValue: 
   m_GlobalPointSize: 14
-  m_CharacterLimit: 0
+  m_CharacterLimit: 9
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
@@ -701,7 +701,7 @@ MonoBehaviour:
   m_RestoreOriginalTextOnEscape: 1
   m_isRichTextEditingAllowed: 0
   m_LineLimit: 0
-  m_InputValidator: {fileID: 0}
+  m_InputValidator: {fileID: 11400000, guid: b171c2585e70848dca36a629b3f21b3a, type: 2}
 --- !u!114 &802388516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1144,6 +1144,7 @@ GameObject:
   - component: {fileID: 1428401274}
   - component: {fileID: 1428401273}
   - component: {fileID: 1428401272}
+  - component: {fileID: 1428401275}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -1213,7 +1214,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1428401273}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1428401275}
+        m_MethodName: SwitchScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ExampleGame
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1428401273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1251,6 +1263,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1428401270}
   m_CullTransparentMesh: 0
+--- !u!114 &1428401275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428401270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac3db53bb96924297a8ced05a86b5e7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1597183034
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,6 +1623,7 @@ GameObject:
   - component: {fileID: 1969939109}
   - component: {fileID: 1969939108}
   - component: {fileID: 1969939107}
+  - component: {fileID: 1969939110}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -1668,7 +1693,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1969939108}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1969939110}
+        m_MethodName: SwitchScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainMenu
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1969939108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1706,6 +1742,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1969939105}
   m_CullTransparentMesh: 0
+--- !u!114 &1969939110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969939105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac3db53bb96924297a8ced05a86b5e7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2083293511
 GameObject:
   m_ObjectHideFlags: 0
