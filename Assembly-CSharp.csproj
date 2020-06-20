@@ -40,9 +40,11 @@
      <Compile Include="Assets\SaveLoadSystem\Scripts\Gameplay\DotSpawner.cs" />
      <Compile Include="Assets\SaveLoadSystem\Scripts\Gameplay\PlayerMovement.cs" />
      <Compile Include="Assets\SaveLoadSystem\Scripts\Gameplay\ScoreCounter.cs" />
-     <Compile Include="Assets\SaveLoadSystem\Scripts\SaveLoad\SaveData.cs" />
+     <Compile Include="Assets\SaveLoadSystem\Scripts\SaveLoad\SaveData\DotData.cs" />
      <Compile Include="Assets\SaveLoadSystem\Scripts\SaveLoad\SaveData\PlayerData.cs" />
+     <Compile Include="Assets\SaveLoadSystem\Scripts\SaveLoad\SaveData\SaveData.cs" />
      <Compile Include="Assets\SaveLoadSystem\Scripts\SaveLoad\Serialization\SerializationManager.cs" />
+     <Compile Include="Assets\SaveLoadSystem\Scripts\SaveLoad\Serialization\Vector2Surrogate.cs" />
      <None Include="Assets\Tools\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\Tools\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Tools\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
