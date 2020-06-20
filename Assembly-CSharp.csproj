@@ -36,6 +36,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\SaveLoadSystem\Scripts\Gameplay\Dot.cs" />
+     <Compile Include="Assets\SaveLoadSystem\Scripts\Gameplay\DotSpawner.cs" />
+     <Compile Include="Assets\SaveLoadSystem\Scripts\Gameplay\PlayerMovement.cs" />
+     <Compile Include="Assets\SaveLoadSystem\Scripts\Gameplay\ScoreCounter.cs" />
      <Compile Include="Assets\SaveLoadSystem\Scripts\SaveLoad\SaveData.cs" />
      <Compile Include="Assets\SaveLoadSystem\Scripts\SaveLoad\SaveData\PlayerData.cs" />
      <Compile Include="Assets\SaveLoadSystem\Scripts\SaveLoad\Serialization\SerializationManager.cs" />
