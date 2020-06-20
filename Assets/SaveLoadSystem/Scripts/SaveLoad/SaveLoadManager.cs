@@ -37,7 +37,7 @@ namespace SaveLoadSystem.SaveLoad
         // Load data from file and distribute
         public void Load()
         {
-            if (SaveData.current.saveName != null && File.Exists(Application.persistentDataPath + "/saves" + SaveData.current.saveName + ".save"))
+            if (SaveData.current.saveName != null && File.Exists(Application.persistentDataPath + "/saves/" + SaveData.current.saveName + ".save"))
             {
                 SaveData.current = (SaveData)SerializationManager.Load(Application.persistentDataPath + "/saves/" + SaveData.current.saveName + ".save");
                 GameEvents.current.DispatchOnLoadEvent();

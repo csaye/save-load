@@ -49,7 +49,10 @@ namespace SaveLoadSystem.Gameplay
 
         private void OnLoad()
         {
-            dot.transform.position = SaveData.current.dotData.dotPosition;
+            if (SaveData.current.dotData.dotPosition != Vector2.zero)
+            {
+                dot.transform.position = SaveData.current.dotData.dotPosition;
+            }
         }
 
         private void OnDisable()
