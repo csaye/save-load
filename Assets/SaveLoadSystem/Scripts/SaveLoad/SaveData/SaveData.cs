@@ -28,6 +28,7 @@ namespace SaveLoadSystem.SaveLoad
 
         // Data stored by save
         public string saveName;
+        public string saveScene;
         public PlayerData playerData = new PlayerData("", 0, Vector2.zero);
         public DotData dotData = new DotData(Vector2.zero);
     }

@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace SaveLoadSystem.SaveLoad
 {
@@ -24,6 +25,12 @@ namespace SaveLoadSystem.SaveLoad
         public void Save()
         {
             GameEvents.current.DispatchOnSaveEvent();
+
+            if (loadOnStart)
+            {
+                SaveData.current.saveScene = SceneManager.GetActiveScene().name;
+            }
+
             SerializationManager.Save(SaveData.current.saveName, SaveData.current);
         }
 
@@ -39,8 +46,8 @@ namespace SaveLoadSystem.SaveLoad
 
         public void CreateNewSave()
         {
-            // try
-            // {
+            try
+            {
                 TMP_InputField saveNameField = (TMP_InputField)FindObjectOfType(typeof(TMP_InputField));
                 
                 // Initialize new save
@@ -49,11 +56,11 @@ namespace SaveLoadSystem.SaveLoad
                 SaveData.current.dotData = new DotData(Vector2.zero);
 
                 Save();
-            // }
-            // catch
-            // {
-            //     Debug.LogError("Could not create new save.");
-            // }
+            }
+            catch
+            {
+                Debug.LogError("Could not create new save.");
+            }
         }
 
         // Returns a unique save name

@@ -47,9 +47,11 @@
      <Compile Include="Assets\SaveLoadSystem\Scripts\SaveLoad\SaveLoadManager.cs" />
      <Compile Include="Assets\SaveLoadSystem\Scripts\SaveLoad\Serialization\SerializationManager.cs" />
      <Compile Include="Assets\SaveLoadSystem\Scripts\SaveLoad\Serialization\Vector2Surrogate.cs" />
-     <Compile Include="Assets\SaveLoadSystem\Scripts\UI\MenuButton.cs" />
+     <Compile Include="Assets\SaveLoadSystem\Scripts\UI\Buttons\MenuButton.cs" />
+     <Compile Include="Assets\SaveLoadSystem\Scripts\UI\Buttons\SavesListButton.cs" />
+     <Compile Include="Assets\SaveLoadSystem\Scripts\UI\Buttons\StartButton.cs" />
      <Compile Include="Assets\SaveLoadSystem\Scripts\UI\ModifiedAlphanumericValidator.cs" />
-     <Compile Include="Assets\SaveLoadSystem\Scripts\UI\StartButton.cs" />
+     <Compile Include="Assets\SaveLoadSystem\Scripts\UI\SavesList.cs" />
      <None Include="Assets\Tools\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\Tools\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Tools\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
