@@ -2,6 +2,7 @@
 
 namespace SaveLoadSystem.SaveLoad
 {
+    [System.Serializable]
     public class DotData
     {
         public Vector2 dotPosition;

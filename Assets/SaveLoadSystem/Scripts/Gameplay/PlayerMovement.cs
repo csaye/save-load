@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using SaveLoadSystem.SaveLoad;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -16,6 +17,13 @@ namespace SaveLoadSystem.Gameplay
         public TextMeshProUGUI playerPositionText;
 
         private void Update()
+        {
+            UpdateMovement();
+
+            playerPositionText.text = ((Vector2)transform.position).ToString();
+        }
+
+        private void UpdateMovement()
         {
             Vector2 bounds = (Vector2)mainCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
 
@@ -42,9 +50,29 @@ namespace SaveLoadSystem.Gameplay
                 vertical = 0;
             }
 
-            rb.velocity = new Vector2(horizontal, vertical) * speed;
+            rb.velocity = new Vector2(horizontal, vertical).normalized * speed;
+        }
 
-            playerPositionText.text = ((Vector2)transform.position).ToString();
+        private void OnEnable()
+        {
+            GameEvents.onSaveEvent += OnSave;
+            GameEvents.onLoadEvent += OnLoad;
+        }
+
+        private void OnSave()
+        {
+            SaveData.current.playerData.playerPosition = (Vector2)transform.position;
+        }
+
+        private void OnLoad()
+        {
+            transform.position = SaveData.current.playerData.playerPosition;
+        }
+
+        private void OnDisable()
+        {
+            GameEvents.onSaveEvent -= OnSave;
+            GameEvents.onLoadEvent -= OnLoad;
         }
     }
 }

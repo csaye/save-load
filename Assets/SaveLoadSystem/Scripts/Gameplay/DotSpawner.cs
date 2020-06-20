@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using SaveLoadSystem.SaveLoad;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +13,8 @@ namespace SaveLoadSystem.Gameplay
         public GameObject dotPrefab;
         public Transform dynamicObjects;
         public Camera mainCamera;
+
+        private GameObject dot;
 
         private void Start()
         {
@@ -30,7 +33,29 @@ namespace SaveLoadSystem.Gameplay
 
             Vector2 randomPos = new Vector2(Random.Range(bounds.x * -1, bounds.x), Random.Range(bounds.y * -1, bounds.y));
 
-            Instantiate(dotPrefab, randomPos, Quaternion.identity, dynamicObjects);
+            dot = Instantiate(dotPrefab, randomPos, Quaternion.identity, dynamicObjects);
+        }
+
+        private void OnEnable()
+        {
+            GameEvents.onSaveEvent += OnSave;
+            GameEvents.onLoadEvent += OnLoad;
+        }
+
+        private void OnSave()
+        {
+            SaveData.current.dotData.dotPosition = dot.transform.position;
+        }
+
+        private void OnLoad()
+        {
+            dot.transform.position = SaveData.current.dotData.dotPosition;
+        }
+
+        private void OnDisable()
+        {
+            GameEvents.onSaveEvent -= OnSave;
+            GameEvents.onLoadEvent -= OnLoad;
         }
     }
 }

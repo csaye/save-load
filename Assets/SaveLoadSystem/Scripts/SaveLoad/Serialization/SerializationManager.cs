@@ -20,7 +20,7 @@ namespace SaveLoadSystem.SaveLoad
                 Directory.CreateDirectory(dataPath + "/saves");
             }
 
-            string path = dataPath + "/saves" + saveName + ".save";
+            string path = dataPath + "/saves/" + saveName + ".save";
 
             FileStream file = File.Create(path);
 
